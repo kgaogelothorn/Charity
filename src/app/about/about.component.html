@@ -1,0 +1,54 @@
+<div routerLink="" class="banner">
+    <div class="banner-text">
+      <img src="../../assets/unnamed.jpg" alt="">
+      <h3>Sponsor a farm with 1000 litres of clean water</h3>
+    </div>
+    <progress id="file" value="38" max="100"> 32% </progress>
+    <div class="banner-txt">
+      <div>
+        <ul>
+          <li>R750 000</li>
+          <li>goal</li>
+        </ul>
+      </div>
+      <div>
+        <ul>
+          <li>30</li>
+          <li>Days to go</li>
+        </ul>
+      </div>
+      <div>
+        <ul>
+          <li>250</li>
+          <li>contributors</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+<div class="tabs">
+  <ul>
+    <li (click)="toggleShow()">About</li>
+    <li (click)="toggleShow()">Supporters</li>
+    <li (click)="toggleShow()">Contacts</li>
+  </ul>
+</div>
+<div *ngIf="!isShown" class="container">
+  <p>Lorem ipsum dolor sit amet, con sectetur adip iscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+    </p>
+  <p>Ut enim ad minim veniam, quis nostrud exer citation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <ul>
+      <li>Lorem ipsum dolor sit amet, con sectetur adip iscing elit, sed do eiusmod.</li>
+      <li>Tempor incididunt ut labore magna aliqua.</li>
+      <li>Ut enim ad minim veniam quis</li>
+      <li>Nostrud exer citation ullamco laboris.</li>
+    </ul>
+    <img src="assets/cow.jpg" style="width: 340px;height: 180px;" alt="">
+    <p>Ut enim ad minim veniam, quis nostrud exer citation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <button class="btn" routerLink="">Donate</button>
+</div>
+
+
+
+
+
