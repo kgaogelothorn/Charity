@@ -3,12 +3,18 @@
 </div>
 <div class="hero-banner" style="background-image:linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url({{donation?.image}});">
 
-  <div class="d-flex flex-wrap p-1">
+  <div class="d-flex flex-wrap p-1 align-center">
     <img class="logo-img" src="assets/unnamed.jpg" alt="">
     <h1 class="heading line-md font-xlg w-80 px-2">{{donation?.heading}}</h1>
   </div>
   <div class="banner-text d-flex flex-wrap justify-between p-2 w-100">
-    <progress class="progress-bar w-100 mb-2" id="file" [value]="donation?.progress" max="100"> {{donation?.progress}}% </progress>
+    <div class="progress w-100">
+      <progress class="progress-bar w-100" id="file" [value]="donation?.progress" max="100"></progress>
+      <div class="label" [class.end]="donation.progress >= 100"  
+        [ngStyle]="getStyles(donation.progress)">
+        {{donation?.progress}}%
+      </div>
+    </div>
     <div class="banner-txt">
       <span class="font-xlg">{{donation?.goal}}</span><br>
       <span class="font-lg">goal</span>
@@ -45,7 +51,10 @@
     <img [src]="donation?.aboutImg" class="img-fluid mb-2" alt="">
     <p class="about-text mb-4">Ut enim ad minim veniam, quis nostrud exer citation ullamco laboris nisi ut aliquip ex ea
       commodo consequat.</p>
-    <button [disabled]="donated || donation.progress >= 100" type="button" (click)="donate()" class="btn btn-primary font-lg">Donate</button>
+    <button [disabled]="donated || donation.progress >= 100" type="button" (click)="donate()" class="btn btn-primary font-lg"
+      [innerHtml]="donation.progress >= 100 ? 'Donation goal reached' : 'Donate'">
+    
+    </button>
   </div>
 </ng-container>
 <ng-container *ngIf="show==='supporters'">
@@ -64,5 +73,5 @@
 </ng-container>
 
 <div class="alert-notification" *ngIf="donationSuccess">
-  Your donations was successfully Added.
+  Your donation was successfully Added.
 </div>

@@ -38,7 +38,7 @@ export class AboutComponent implements OnInit {
     let updatedDonations: Donation[] = [];
     this.donations.forEach((donation: Donation) => {
       if (donation.id === this.donationId) {
-        donation.progress += 10; // Adding 10 percent for every donation click
+        donation.progress = (donation.progress + 15) >= 100 ? 100 : donation.progress + 15; // Adding 15 percent for every donation click and capping goal to 100%
         donation.contributions += 1;
         updatedDonations.push(donation);
       } else {
@@ -48,6 +48,7 @@ export class AboutComponent implements OnInit {
     localStorage.setItem('donations', JSON.stringify(updatedDonations));
     this.donated = true;
     this.donationSuccess = true;
+    this.gotoTop();
     setTimeout(() => {
       this.donationSuccess = false;
     }, 3000);
@@ -59,5 +60,19 @@ export class AboutComponent implements OnInit {
       return item.id === this.donationId;
     });
     this.donation = currentDonation[0];
+  }
+
+  getStyles(value: number) {
+    return {
+      'left' : value >= 100 ? '80%' : (value - 8) + '%',
+    }
+  }
+
+  gotoTop() {
+    window.scroll({ 
+      top: 0, 
+      left: 0, 
+      behavior: 'smooth' 
+    });
   }
 }
