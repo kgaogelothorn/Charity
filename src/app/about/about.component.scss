@@ -1,7 +1,19 @@
+@import "../../styles/variables";
+
 .hero-banner {
   height: 350px;
- 
 }
-.banner-img {
-  width: 100px;
+.banner-text {
+  position: relative;
+  top: 70px;
+}
+.heading {
+  color: $white-color;
+  line-height: 1.4;
+  font-weight: bold;
+
+}
+.banner-txt {
+  color: $white-color;
+  font-weight: bold;
 }

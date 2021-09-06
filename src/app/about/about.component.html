@@ -1,21 +1,21 @@
-<div class="hero-banner" style="background-image: url(assets/hero-banner.jpg);">
-  <div class="d-flex  flex-wrap p-2">
-    <img class="banner-img" src="../../assets/unnamed.jpg" alt="">
-    <p class="heading p-1">{{currentDonation[0].heading}}</p>
-    <progress class="w-100" style="width: 100%;" id="file" value="32" max="100"> 32% </progress>
+<div class="hero-banner" style="background-image: url({{currentDonation[0].image}});">
+  <div class="d-flex flex-wrap p-1">
+    <img class="banner-img w-20" src="assets/unnamed.jpg" alt="">
+    <h1 class="heading line-md font-xlg w-80 px-2">{{currentDonation[0].heading}}</h1>
   </div>
   <div class="banner-text d-flex flex-wrap justify-between p-2">
-    <div>
-      <span>R750 000</span><br>
-      <span>goal</span>
+    <progress class="progress-bar w-100 mb-2" id="file" value="32" max="100"> 32% </progress>
+    <div class="banner-txt">
+      <span class="font-xlg">{{currentDonation[0].goal}}</span><br>
+      <span class="font-lg">goal</span>
     </div>
-    <div>
-      <span>30</span><br>
-      <span>Days to go</span>
+    <div class="banner-txt">
+      <span class="font-xlg">{{currentDonation[0].days}}</span><br>
+      <span class="font-lg">Days to go</span>
     </div>
-    <div>
-      <span>250</span><br>
-      <span>Contributions</span>
+    <div class="banner-txt">
+      <span class="font-xlg">{{currentDonation[0].contributions}}</span><br>
+      <span class="font-lg">Contributions</span>
     </div>
   </div>
 </div>
@@ -38,10 +38,10 @@
       <li class="mb-2">Ut enim ad minim veniam quis</li>
       <li class="mb-2">Nostrud exer citation ullamco laboris.</li>
     </ul>
-    <img src="assets/cow.jpg" style="width: 100%;height: auto;" class="img-fluid mb-2" alt="">
+    <img [src]="currentDonation[0].aboutImg" style="width: 100%;height: auto;" class="img-fluid mb-2" alt="">
     <p class="about-text mb-4">Ut enim ad minim veniam, quis nostrud exer citation ullamco laboris nisi ut aliquip ex ea
       commodo consequat.</p>
-    <button class="btn btn-primary" routerLink="">Donate</button>
+    <button class="btn btn-primary font-lg" routerLink="">Donate</button>
   </div>
 </ng-container>
 <ng-container *ngIf="show==='supporters'">
@@ -58,58 +58,3 @@
     <p>08554888595</p>
   </div>
 </ng-container>
-
-
-
-
-
-
-<!-- <div routerLink="" class="banner">
-    <div class="banner-text">
-      <img src="../../assets/unnamed.jpg" alt="">
-      <h3>Sponsor a farm with 1000 litres of clean water</h3>
-    </div>
-    <progress id="file" value="38" max="100"> 32% </progress>
-    <div class="banner-txt">
-      <div>
-        <ul>
-          <li>R750 000</li>
-          <li>goal</li>
-        </ul>
-      </div>
-      <div>
-        <ul>
-          <li>30</li>
-          <li>Days to go</li>
-        </ul>
-      </div>
-      <div>
-        <ul>
-          <li>250</li>
-          <li>contributors</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-<div class="tabs">
-  <ul>
-    <li (click)="toggleShow()">About</li>
-    <li (click)="toggleShow()">Supporters</li>
-    <li (click)="toggleShow()">Contacts</li>
-  </ul>
-</div>
-<div *ngIf="!isShown" class="container">
-  <p>Lorem ipsum dolor sit amet, con sectetur adip iscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-
-    </p>
-  <p>Ut enim ad minim veniam, quis nostrud exer citation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    <ul>
-      <li>Lorem ipsum dolor sit amet, con sectetur adip iscing elit, sed do eiusmod.</li>
-      <li>Tempor incididunt ut labore magna aliqua.</li>
-      <li>Ut enim ad minim veniam quis</li>
-      <li>Nostrud exer citation ullamco laboris.</li>
-    </ul>
-    <img src="assets/cow.jpg" style="width: 340px;height: 180px;" alt="">
-    <p>Ut enim ad minim veniam, quis nostrud exer citation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      <button class="btn" routerLink="">Donate</button>
-</div> -->
