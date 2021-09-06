@@ -7,15 +7,6 @@ html {
   padding: 0;
   margin: 0;
 }
-// .banner {
-//     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./assets/photographer.jpg");
-//     height: 25%;
-//     background-position: center;
-//     background-repeat: no-repeat;
-//     background-size: cover;
-//     position: relative;
-//   }
-
 .header {
   padding: 15px;
   letter-spacing: 0;
@@ -25,7 +16,6 @@ html {
   color: $dark-grey-color;
   font-size: 18px;
 }
-
 .hero-banner {
   height: 150px;
   background-size: cover;
@@ -50,11 +40,9 @@ html {
     background-color: $light-grey-color;
   }
 }
-
 .card {
   border-bottom: 1px solid lightgrey;
 }
-
 .text-heading {
   font-size: 18px;
   font-weight: 400;
@@ -76,7 +64,6 @@ html {
   font-family: "Roboto", sans-serif;
   padding-bottom: 4px;
 }
-
 .grey-label {
   font-size: 13px;
   background-color: #bdc1c5;
@@ -92,7 +79,6 @@ html {
     padding: 8px;
   }
 }
-
 .btn {
   border: 0;
   background: $green-color;
@@ -109,6 +95,9 @@ html {
     width: 100%;
     text-align: center;
   }
+}
+.btn-image {
+  max-width: 50px;
 }
 
 .icon-container {
