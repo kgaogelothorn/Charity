@@ -113,11 +113,22 @@ html {
   list-style: disc !important;
   font-family: 'Roboto', sans-serif;
 }
+@import "./styles/helpers";
 
 @media (min-width: 800px) {
   .hero-banner {
     height: 350px;
   }
 }
+@media (max-width: 500px) {
+  .font-lg {
+    font-size: 0.85rem;
+  }
+  .font-xlg {
+    font-size: 1.2rem;
+  }
+  .text-heading {
+    font-size: 1rem;
+  }
+}
 
-@import "./styles/helpers";

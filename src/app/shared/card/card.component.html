@@ -1,0 +1,60 @@
+<div class="card d-flex" routerLink="/about/{{item?.id}}">
+    <div class="p-2" [ngClass]="{'w-80': item.cta, 'w-100': !item.cta}">
+      <div class="card-body d-flex align-center w-100">
+        <div class="icon-container w-30">
+         <svg>
+           <circle cx="42" cy="42" r="42"></circle>
+           <circle cx="42" cy="42" r="42"></circle>
+         </svg>
+          <img class="img-icon" [src]="item.image" alt="item.description">
+        </div>
+          <div  class="px-2 w-70">
+           <p class="text-heading">{{item.heading}}</p>
+           <p class="text-sub-heading">{{item.subHeading}}</p>
+           <p class="text-description">{{item.description}}</p>
+         </div>
+      </div>
+      <div class="card-footer w-100">
+         <div class="grey-label">
+           <span>1 day remaining</span>
+           <span>{{item.progress}}% raised</span>
+         </div>
+      </div>
+    </div>
+      <div class="w-20" *ngIf="item.cta">
+        <button [routerLink]="item?.cta_url" type="button" class="d-block btn btn-donate w-100">
+          <img src="../../assets/Shape.png" class="btn-image w-50 mb-1" alt="">
+          <p>Donate again</p>
+           </button>
+      </div>
+  </div>
+<!-- <div class="card d-flex" routerLink="/about/{{item?.id}}">
+    <div class="p-2" [ngClass]="{'w-80': item.cta, 'w-100': !item.cta}">
+      <div class="card-body d-flex align-center w-100">
+        <div class="icon-container w-30">
+         <svg>
+           <circle cx="42" cy="42" r="42"></circle>
+           <circle cx="42" cy="42" r="42"></circle>
+         </svg>
+          <img class="img-icon" [src]="item.image" alt="item.description">
+        </div>
+          <div  class="px-2 w-70">
+           <p class="text-heading">{{item.heading}}</p>
+           <p class="text-sub-heading">{{item.subHeading}}</p>
+           <p class="text-description">{{item.description}}</p>
+         </div>
+      </div>
+      <div class="card-footer w-100">
+         <div class="grey-label">
+           <span>1 day remaining</span>
+           <span>{{item.progress}}% raised</span>
+         </div>
+      </div>
+    </div>
+      <div class="w-20" *ngIf="item.cta">
+        <button [routerLink]="item?.cta_url" type="button" class="d-block btn btn-donate w-100">
+          <img src="../../assets/Shape.png" class="btn-image w-50 mb-1" alt="">
+          <p>Donate again</p>
+           </button>
+      </div>
+  </div> -->

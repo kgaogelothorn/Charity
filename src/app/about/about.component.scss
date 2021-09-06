@@ -2,18 +2,45 @@
 
 .hero-banner {
   height: 350px;
+  position: relative;
 }
 .banner-text {
-  position: relative;
-  top: 70px;
+  position: absolute;
+  bottom: 10px;
+  color: $white-color;
+  font-weight: bold;
+  z-index: 2;
 }
 .heading {
+  position: relative;
   color: $white-color;
   line-height: 1.4;
   font-weight: bold;
-
+  z-index: 2;
 }
-.banner-txt {
+
+.logo-img {
+  width: 100%;
+  max-width: 57px;
+  object-fit: contain;
+}
+
+.back {
   color: $white-color;
-  font-weight: bold;
+  padding: 15px;
+  padding-bottom: 0;
+  display: block;
+  text-decoration: none;
+}
+
+.alert-notification{
+  background: rgb(9 187 7 / 90%);
+  padding: 45px 15px;
+  color: #fff;
+  position: fixed;
+  bottom: 0;
+  font-size: 21px;
+  line-height: 1.2;
+  text-align: center;
+  width: 100%;
 }
