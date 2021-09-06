@@ -1,20 +1,133 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
-
-body, html {
-  font-family: 'Roboto', sans-serif;
-  height: 100%;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
+@import "./styles/reset";
+@import "./styles/variables";
+body,
+html {
+  font-family: "Roboto", sans-serif;
   padding: 0;
   margin: 0;
 }
-.banner {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./assets/photographer.jpg");
-    height: 25%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-  }
-  .tabs ul li{
-    display: inline-block;
-    width: 33.33%;
+// .banner {
+//     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./assets/photographer.jpg");
+//     height: 25%;
+//     background-position: center;
+//     background-repeat: no-repeat;
+//     background-size: cover;
+//     position: relative;
+//   }
+
+.header {
+  padding: 15px;
+  letter-spacing: 0;
+  line-height: 1;
+  text-align: left;
+  font-weight: 500;
+  color: $dark-grey-color;
+  font-size: 18px;
 }
+
+.hero-banner {
+  height: 150px;
+  background-size: cover;
+  background-position: top;
+}
+.tabs {
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid $light-grey-color;
+  border-top: 1px solid $light-grey-color;
+}
+.tab {
+  cursor: pointer;
+  border-right: 1px solid $light-grey-color;
+  color: $dark-grey-color;
+  padding: 14px;
+  font-weight: 400;
+  text-align: center;
+  font-size: 16px;
+  width: 33.33333%;
+  &.active {
+    background-color: $light-grey-color;
+  }
+}
+
+.card {
+  border-bottom: 1px solid lightgrey;
+}
+
+.text-heading {
+  font-size: 18px;
+  font-weight: 400;
+  color: $dark-grey-color;
+  font-family: "Roboto", sans-serif;
+  padding-bottom: 4px;
+}
+.text-sub-heading {
+  font-size: 13px;
+  font-weight: 400;
+  color: $grey-color;
+  font-family: "Roboto", sans-serif;
+  padding-bottom: 4px;
+}
+.text-description {
+  font-size: 14px;
+  font-weight: 600;
+  color: $dark-grey-color;
+  font-family: "Roboto", sans-serif;
+  padding-bottom: 4px;
+}
+
+.grey-label {
+  font-size: 13px;
+  background-color: #bdc1c5;
+  border-radius: 21.6px;
+  color: $white-color;
+  display: flex;
+  span {
+    width: 50%;
+    text-align: center;
+    &:last-child {
+      border-left: 1px solid $white-color;
+    }
+    padding: 8px;
+  }
+}
+
+.btn {
+  border: 0;
+  background: $green-color;
+  color: $white-color;
+  &-donate {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &-primary {
+    padding: 15px;
+    border-radius: 3px;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.icon-container {
+  position: relative;
+  width: 94px;
+  height: 94px;
+}
+.about-text {
+  color: $dark-grey-color;
+  font-size: 18px;
+  line-height: 1.5;
+  list-style: disc !important;
+  font-family: 'Roboto', sans-serif;
+}
+
+@media (min-width: 800px) {
+  .hero-banner {
+    height: 350px;
+  }
+}
+
+@import "./styles/helpers";

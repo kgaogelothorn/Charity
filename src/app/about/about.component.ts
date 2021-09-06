@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { donations } from '../shared/shared';
 
 @Component({
   selector: 'app-about',
@@ -6,17 +8,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./about.component.scss']
 })
 export class AboutComponent implements OnInit {
-  isShown: boolean = false ; // hidden by default
+  show = 'about';
+  donationId = 0;
+  donations = donations;
+  currentDonation: any;
+  constructor(readonly route: ActivatedRoute ) { }
 
-
-  toggleShow() {
-  
-  this.isShown = ! this.isShown;
-  }  
-
-  constructor() { }
-
+  toggleShow(value: string) {
+    this.show = value;
+  } 
   ngOnInit(): void {
+    this.donationId = Number(this.route.snapshot.params.id);
+    this.currentDonation = this.donations.filter(item => {
+      return item.id === this.donationId;
+    });
+    console.log(this.donationId, this.currentDonation);
   }
-
 }
